@@ -1,92 +1,76 @@
+/* Font Style Import */
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* CSS Reset */
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Josefin Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-body {
-    background-color: ghostwhite;
-}
+
+
+/* Elements */
 
 main {
-    padding: 10rem 50rem;
+  width: 100%;
+  padding: 0rem 12rem 5rem 12rem;
 }
+
+/* Classes */
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+}
+
+/* IDs */
 
 #home {
-    text-align: center;
-    padding-top: 4rem;
-}
-
-#title {
-    font-size: 4rem;
+  display: flex;
+  align-items: center;
+  height: 45rem;
 }
 
 #img-div {
-    padding-top: 1rem;
+  text-align: center;
 }
 
 #image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 #img-caption {
-    padding-top: 1.5rem;
-    padding-bottom: 3.5rem;
-    font-size: 2rem;
-    font-style: italic;
+  padding-top: 1rem;
+  font-size: 1.5rem;
 }
 
-h2 {
-    font-size: 3rem;
-    padding-top: 2rem;
-}
-
-p {
-    padding-top: 1.5rem;
-    font-size: 1.5rem;
-    text-align: justify;
-    font-weight: 350;
+#title {
+  font-size: 15rem;
+  font-weight: 900;
+  letter-spacing: -1.5rem;
+  padding-top: 8rem;
 }
 
 #tribute-info {
-    padding-top: 2rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h3 {
-    font-size: 2.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.rizal-work {
-    width: 100%;
-    height: auto;
-}
-
-#rizal-moreinfo {
-    padding-top: 3rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-    main {
-        padding: 2rem 5rem;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    main {
-        padding: 2rem 10rem;
-    }
-}
