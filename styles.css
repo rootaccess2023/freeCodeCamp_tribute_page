@@ -20,6 +20,55 @@ main {
   padding: 0rem 12rem 5rem 12rem;
 }
 
+summary {
+  background-color: #f7ebd7;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  font-size: 2rem;
+  display: flex;
+  align-content: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 350;
+  text-align: justify;
+}
+
+i {
+  padding-right: 1rem;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  background-color: black;
+  color: white;
+}
+
+small {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+small:hover {
+  text-decoration: underline;
+}
+
+small a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Classes */
 
 .image-container {
@@ -35,12 +84,108 @@ main {
   align-content: end;
 }
 
+.short-description {
+  font-weight: 400;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.short-description::first-letter {
+  font-size: 5rem;
+  float: left;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.short-description-container {
+  background-color: #E58B4B;
+}
+
+.summary-container {
+  width: 100%;
+}
+
+.content-container {
+  margin: 1rem 0rem;
+  background-color: #f7ebd7;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: black;
+  border: 4px solid white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.date {
+  color: white;
+  background-color: #562B00;
+  width: 6rem;
+  padding: 0.5rem 1rem;
+}
+
 /* IDs */
 
 #home {
   display: flex;
   align-items: center;
-  height: 45rem;
+  height: 47rem;
 }
 
 #img-div {
@@ -74,3 +219,46 @@ main {
   justify-content: center;
 }
 
+#tribute-info-title {
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+
+#timeline-title {
+  font-size: 4rem;
+  padding-top: 5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
