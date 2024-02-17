@@ -8,6 +8,8 @@ This tribute page is dedicated to Jose Rizal, a Filipino nationalist, polymath, 
 
 You can view the fully implemented tribute page online at the following link:
 
+<img src="/Tribute Page.png">
+
 [View Tribute Page to Jose Rizal](#)
 
 ## Project Description
