@@ -17,7 +17,10 @@
 
 main {
   width: 100%;
-  padding: 0rem 12rem 5rem 12rem;
+  padding-top: clamp(2rem, 5vw, 7rem);
+  padding-bottom: clamp(2.5rem, 20vw, 5rem);
+  padding-left: clamp(1rem, 10vw, 12rem);
+  padding-right: clamp(1rem, 10vw, 12rem);
 }
 
 summary {
@@ -25,7 +28,7 @@ summary {
   padding: 2rem;
   margin-bottom: 1rem;
   list-style: none;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   display: flex;
   align-content: center;
 }
@@ -71,22 +74,20 @@ small a {
 
 /* Classes */
 
-.image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.title-container,
+#img-div {
   width: 100%;
-}
+} 
 
 .title-container {
   display: flex;
-  flex-direction: column;
-  align-content: end;
+  align-items: center;
 }
 
 .short-description {
   font-weight: 400;
   text-align: justify;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   padding: 2rem;
 }
 
@@ -102,7 +103,7 @@ small a {
 }
 
 .summary-container {
-  width: 100%;
+  width: 80%;
 }
 
 .content-container {
@@ -164,7 +165,7 @@ small a {
 }
 
 .content {
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
   position: relative;
   border-radius: 6px;
   display: flex;
@@ -184,8 +185,8 @@ small a {
 
 #home {
   display: flex;
-  align-items: center;
-  height: 47rem;
+  height: 50vw;
+  padding-bottom: 2rem;
 }
 
 #img-div {
@@ -199,16 +200,20 @@ small a {
   margin: 0 auto;
 }
 
-#img-caption {
+#img-text {
   padding-top: 1rem;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 2rem);
+  text-align: center;
 }
 
 #title {
-  font-size: 15rem;
+  font-size: clamp(8rem, 15vw, 15rem);
   font-weight: 900;
-  letter-spacing: -1.5rem;
-  padding-top: 8rem;
+  letter-spacing: -1.2rem;
+  text-align: left;
+  height: auto;
+  line-height: clamp(5.5rem, 11vw,9rem);
+  padding-right: 2rem;
 }
 
 #tribute-info {
@@ -220,7 +225,7 @@ small a {
 }
 
 #tribute-info-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   text-align: center;
   padding-bottom: 2.5rem;
 }
@@ -228,10 +233,16 @@ small a {
 #timeline-title {
   font-size: 4rem;
   padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 
 @media screen and (max-width: 768px) {
+
+  .content {
+    padding: 0 0;
+  }
+
   /* Place the timelime to the left */
   .timeline::after {
   left: 31px;
@@ -261,4 +272,31 @@ small a {
   .right {
   left: 0%;
   }
+
+  .title-container,
+  #img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  } 
+
+
+  #title {
+    text-align: center;
+    letter-spacing: -1rem;
+    padding-top: 0;
+  }
+
+  #home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: clamp(48rem, 55rem, 60rem);
+  }
+
+  
+
+
 }
